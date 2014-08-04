@@ -30,7 +30,7 @@ while($line=<DATA>){
 			if($_ =~m/(.+)\t(\d+)\t\.+\t.+\t.+\t.+\n/){
 				if($1 eq $plasmid & $2 eq $mainpos){
 					$duplicate=1;
-					#note which mutations where removed by the programm
+					#note which mutations were removed by the programm
 					push (@mutremoved, $i);
 					print LOGFILE "REMOVED line: ".$i." \t position: ".$2."\n";
 				}
